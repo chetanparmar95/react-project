@@ -7,14 +7,17 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet} from 'react-native';
-import {Header} from './src/components/header';
+import {StyleSheet, View} from 'react-native';
+import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-      <Header />
+      <View style = {{flex: 1}}>
+        <Header headerTitle={'Album'}/>
+        <AlbumList />
+      </View>
     );
   }
 }
